@@ -404,7 +404,7 @@
   "teams": [
     {
       "id": "ALP",
-      "name": "Alpine",
+      "name": "alpine",
       "full_name": "BWT Alpine F1 Team",
       "base": ["Enstone", "United Kingdom"],
       "team_principal": "Flavio Briatore",
@@ -420,7 +420,7 @@
     },
     {
       "id": "AMR",
-      "name": "Aston Martin",
+      "name": "aston_martin",
       "full_name": "Aston Martin Aramco Formula One Team",
       "base": ["Silverstone", "United Kingdom"],
       "team_principal": "Andy Cowell",
@@ -436,7 +436,7 @@
     },
     {
       "id": "FER",
-      "name": "Ferrari",
+      "name": "ferrari",
       "full_name": "Scuderia Ferrari HP",
       "base": ["Maranello", "Italy"],
       "team_principal": "Frédéric Vasseur",
@@ -452,7 +452,7 @@
     },
     {
       "id": "HAAS",
-      "name": "Haas",
+      "name": "haas",
       "full_name": "MoneyGram Haas F1 Team",
       "base": ["Kannapolis", "United States"],
       "team_principal": "Ayao Komatsu",
@@ -468,7 +468,7 @@
     },
     {
       "id": "MCL",
-      "name": "McLaren",
+      "name": "mclaren",
       "full_name": "McLaren Formula 1 Team",
       "base": ["Woking", "United Kingdom"],
       "team_principal": "Andrea Stella",
@@ -484,7 +484,7 @@
     },
     {
       "id": "MER",
-      "name": "Mercedes",
+      "name": "mercedes",
       "full_name": "Mercedes-AMG PETRONAS Formula One Team",
       "base": ["Brackley", "United Kingdom"],
       "team_principal": "Toto Wolff",
@@ -500,7 +500,7 @@
     },
     {
       "id": "RBR",
-      "name": "Red Bull Racing",
+      "name": "red_bull",
       "full_name": "Oracle Red Bull Racing",
       "base": ["Milton Keynes", "United Kingdom"],
       "team_principal": "Christian Horner",
@@ -516,7 +516,7 @@
     },
     {
       "id": "RB",
-      "name": "Racing Bulls",
+      "name": "rb",
       "full_name": "Visa Cash App Racing Bulls Formula One Team",
       "base": ["Faenza", "Italy"],
       "team_principal": "Laurent Mekies",
@@ -532,7 +532,7 @@
     },
     {
       "id": "SAU",
-      "name": "Sauber",
+      "name": "sauber",
       "full_name": "Stake F1 Team Kick Sauber",
       "base": ["Hinwil", "Switzerland"],
       "team_principal": "Jonathan Wheatley",
@@ -548,8 +548,8 @@
     },
     {
       "id": "WIL",
-      "name": "Atlassian Williams Racing",
-      "full_name": "Williams Racing",
+      "name": "williams",
+      "full_name": "Atlassian Williams Racing",
       "base": ["Grove", "United Kingdom"],
       "team_principal": "James Vowles",
       "technical_chief": ["Pat Fry"],
