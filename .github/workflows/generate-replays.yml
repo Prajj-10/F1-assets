@@ -1,0 +1,101 @@
+# GitHub Action for the F1-Assets repository.
+# Save as: .github/workflows/generate-replays.yml
+#
+# How it works:
+#  - Scheduled (~every 10 min): a cheap, dependency-free gate (check_new_race.py)
+#    asks Jolpica whether the latest classified race still needs a replay. Idle
+#    ticks — between races, or once a race is captured — exit in seconds without
+#    installing FastF1. Only when a genuinely new race is ready (~20 min after it
+#    ends) does the job install FastF1 and pull it. If the telemetry isn't ready
+#    yet nothing is written and the next tick retries; the moment it succeeds the
+#    race lands in index.json and polling stops until the next race.
+#  - Manual (workflow_dispatch): run any year / round / range / 'all' on demand,
+#    bypassing the gate — used for backfilling or re-pulling a race.
+name: Generate race replays
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Season year, range (2018-2024), or 'all'"
+        required: true
+        default: "all"
+      round:
+        description: "Round number, or 'all'"
+        required: true
+        default: "all"
+  schedule:
+    # ~every 10 minutes, deliberately off the top of the hour to dodge the
+    # worst of GitHub's scheduling drift.
+    - cron: "5,15,25,35,45,55 * * * *"
+
+permissions:
+  contents: write
+
+# Never let two runs push over each other.
+concurrency:
+  group: generate-replays
+  cancel-in-progress: false
+
+jobs:
+  replays:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      # Manual dispatch runs exactly what was asked. Scheduled runs consult the
+      # cheap gate, which uses only the stdlib python already on the runner.
+      - name: Decide what to run
+        id: decide
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            {
+              echo "run=true"
+              echo "year=${{ github.event.inputs.year }}"
+              echo "round=${{ github.event.inputs.round }}"
+            } >> "$GITHUB_OUTPUT"
+          else
+            python3 check_new_race.py
+          fi
+
+      - name: Set up Python
+        if: steps.decide.outputs.run == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        if: steps.decide.outputs.run == 'true'
+        run: pip install fastf1 numpy pandas
+
+      - name: Cache FastF1 data
+        if: steps.decide.outputs.run == 'true'
+        uses: actions/cache@v4
+        with:
+          path: fastf1_cache
+          key: fastf1-${{ steps.decide.outputs.year }}-${{ github.run_id }}
+          restore-keys: |
+            fastf1-${{ steps.decide.outputs.year }}-
+            fastf1-
+
+      - name: Generate replay(s)
+        if: steps.decide.outputs.run == 'true'
+        run: |
+          python generate_replay.py \
+            "${{ steps.decide.outputs.year }}" \
+            "${{ steps.decide.outputs.round }}"
+
+      - name: Commit results
+        if: steps.decide.outputs.run == 'true'
+        run: |
+          git config user.name "replay-bot"
+          git config user.email "actions@github.com"
+          git add replays/
+          if git diff --cached --quiet; then
+            echo "No new replays to commit (telemetry not ready yet, or nothing changed)."
+          else
+            git commit -m "replays: ${{ steps.decide.outputs.year }} / ${{ steps.decide.outputs.round }}"
+            git pull --rebase --autostash origin "${{ github.ref_name }}" || true
+            git push
+          fi

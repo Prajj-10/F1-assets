@@ -2,6 +2,294 @@
  "version": 1,
  "replays": [
   {
+   "year": 2026,
+   "round": 9,
+   "raceName": "British Grand Prix",
+   "circuit": "Silverstone",
+   "file": "2026/2026_09_R.json.gz",
+   "sizeKb": 506,
+   "posSource": "lap"
+  },
+  {
+   "year": 2026,
+   "round": 8,
+   "raceName": "Austrian Grand Prix",
+   "circuit": "Spielberg",
+   "file": "2026/2026_08_R.json.gz",
+   "sizeKb": 446,
+   "posSource": "lap"
+  },
+  {
+   "year": 2026,
+   "round": 7,
+   "raceName": "Barcelona Grand Prix",
+   "circuit": "Barcelona",
+   "file": "2026/2026_07_R.json.gz",
+   "sizeKb": 477,
+   "posSource": "lap"
+  },
+  {
+   "year": 2026,
+   "round": 5,
+   "raceName": "Canadian Grand Prix",
+   "circuit": "Montr\u00e9al",
+   "file": "2026/2026_05_R.json.gz",
+   "sizeKb": 435,
+   "posSource": "lap"
+  },
+  {
+   "year": 2026,
+   "round": 4,
+   "raceName": "Miami Grand Prix",
+   "circuit": "Miami Gardens",
+   "file": "2026/2026_04_R.json.gz",
+   "sizeKb": 454,
+   "posSource": "lap"
+  },
+  {
+   "year": 2026,
+   "round": 3,
+   "raceName": "Japanese Grand Prix",
+   "circuit": "Suzuka",
+   "file": "2026/2026_03_R.json.gz",
+   "sizeKb": 511,
+   "posSource": "lap"
+  },
+  {
+   "year": 2026,
+   "round": 2,
+   "raceName": "Chinese Grand Prix",
+   "circuit": "Shanghai",
+   "file": "2026/2026_02_R.json.gz",
+   "sizeKb": 423,
+   "posSource": "lap"
+  },
+  {
+   "year": 2026,
+   "round": 1,
+   "raceName": "Australian Grand Prix",
+   "circuit": "Melbourne",
+   "file": "2026/2026_01_R.json.gz",
+   "sizeKb": 413,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 24,
+   "raceName": "Abu Dhabi Grand Prix",
+   "circuit": "Yas Island",
+   "file": "2025/2025_24_R.json.gz",
+   "sizeKb": 460,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 23,
+   "raceName": "Qatar Grand Prix",
+   "circuit": "Lusail",
+   "file": "2025/2025_23_R.json.gz",
+   "sizeKb": 438,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 22,
+   "raceName": "Las Vegas Grand Prix",
+   "circuit": "Las Vegas",
+   "file": "2025/2025_22_R.json.gz",
+   "sizeKb": 385,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 21,
+   "raceName": "S\u00e3o Paulo Grand Prix",
+   "circuit": "S\u00e3o Paulo",
+   "file": "2025/2025_21_R.json.gz",
+   "sizeKb": 427,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 20,
+   "raceName": "Mexico City Grand Prix",
+   "circuit": "Mexico City",
+   "file": "2025/2025_20_R.json.gz",
+   "sizeKb": 475,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 19,
+   "raceName": "United States Grand Prix",
+   "circuit": "Austin",
+   "file": "2025/2025_19_R.json.gz",
+   "sizeKb": 492,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 18,
+   "raceName": "Singapore Grand Prix",
+   "circuit": "Marina Bay",
+   "file": "2025/2025_18_R.json.gz",
+   "sizeKb": 542,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 17,
+   "raceName": "Azerbaijan Grand Prix",
+   "circuit": "Baku",
+   "file": "2025/2025_17_R.json.gz",
+   "sizeKb": 514,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 16,
+   "raceName": "Italian Grand Prix",
+   "circuit": "Monza",
+   "file": "2025/2025_16_R.json.gz",
+   "sizeKb": 381,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 15,
+   "raceName": "Dutch Grand Prix",
+   "circuit": "Zandvoort",
+   "file": "2025/2025_15_R.json.gz",
+   "sizeKb": 475,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 14,
+   "raceName": "Hungarian Grand Prix",
+   "circuit": "Budapest",
+   "file": "2025/2025_14_R.json.gz",
+   "sizeKb": 496,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 13,
+   "raceName": "Belgian Grand Prix",
+   "circuit": "Spa-Francorchamps",
+   "file": "2025/2025_13_R.json.gz",
+   "sizeKb": 485,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 12,
+   "raceName": "British Grand Prix",
+   "circuit": "Silverstone",
+   "file": "2025/2025_12_R.json.gz",
+   "sizeKb": 427,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 11,
+   "raceName": "Austrian Grand Prix",
+   "circuit": "Spielberg",
+   "file": "2025/2025_11_R.json.gz",
+   "sizeKb": 367,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 10,
+   "raceName": "Canadian Grand Prix",
+   "circuit": "Montr\u00e9al",
+   "file": "2025/2025_10_R.json.gz",
+   "sizeKb": 475,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 9,
+   "raceName": "Spanish Grand Prix",
+   "circuit": "Barcelona",
+   "file": "2025/2025_09_R.json.gz",
+   "sizeKb": 457,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 8,
+   "raceName": "Monaco Grand Prix",
+   "circuit": "Monaco",
+   "file": "2025/2025_08_R.json.gz",
+   "sizeKb": 481,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 7,
+   "raceName": "Emilia Romagna Grand Prix",
+   "circuit": "Imola",
+   "file": "2025/2025_07_R.json.gz",
+   "sizeKb": 485,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 6,
+   "raceName": "Miami Grand Prix",
+   "circuit": "Miami Gardens",
+   "file": "2025/2025_06_R.json.gz",
+   "sizeKb": 416,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 5,
+   "raceName": "Saudi Arabian Grand Prix",
+   "circuit": "Jeddah",
+   "file": "2025/2025_05_R.json.gz",
+   "sizeKb": 420,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 4,
+   "raceName": "Bahrain Grand Prix",
+   "circuit": "Sakhir",
+   "file": "2025/2025_04_R.json.gz",
+   "sizeKb": 484,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 3,
+   "raceName": "Japanese Grand Prix",
+   "circuit": "Suzuka",
+   "file": "2025/2025_03_R.json.gz",
+   "sizeKb": 452,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 2,
+   "raceName": "Chinese Grand Prix",
+   "circuit": "Shanghai",
+   "file": "2025/2025_02_R.json.gz",
+   "sizeKb": 473,
+   "posSource": "lap"
+  },
+  {
+   "year": 2025,
+   "round": 1,
+   "raceName": "Australian Grand Prix",
+   "circuit": "Melbourne",
+   "file": "2025/2025_01_R.json.gz",
+   "sizeKb": 459,
+   "posSource": "lap"
+  },
+  {
    "year": 2024,
    "round": 24,
    "raceName": "Abu Dhabi Grand Prix",
@@ -192,6 +480,1077 @@
    "circuit": "Sakhir",
    "file": "2024/2024_01_R.json.gz",
    "sizeKb": 473
+  },
+  {
+   "year": 2023,
+   "round": 22,
+   "raceName": "Abu Dhabi Grand Prix",
+   "circuit": "Yas Island",
+   "file": "2023/2023_22_R.json.gz",
+   "sizeKb": 465,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 21,
+   "raceName": "Las Vegas Grand Prix",
+   "circuit": "Las Vegas",
+   "file": "2023/2023_21_R.json.gz",
+   "sizeKb": 450,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 20,
+   "raceName": "S\u00e3o Paulo Grand Prix",
+   "circuit": "S\u00e3o Paulo",
+   "file": "2023/2023_20_R.json.gz",
+   "sizeKb": 398,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 19,
+   "raceName": "Mexico City Grand Prix",
+   "circuit": "Mexico City",
+   "file": "2023/2023_19_R.json.gz",
+   "sizeKb": 508,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 18,
+   "raceName": "United States Grand Prix",
+   "circuit": "Austin",
+   "file": "2023/2023_18_R.json.gz",
+   "sizeKb": 476,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 17,
+   "raceName": "Qatar Grand Prix",
+   "circuit": "Lusail",
+   "file": "2023/2023_17_R.json.gz",
+   "sizeKb": 427,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 16,
+   "raceName": "Japanese Grand Prix",
+   "circuit": "Suzuka",
+   "file": "2023/2023_16_R.json.gz",
+   "sizeKb": 426,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 15,
+   "raceName": "Singapore Grand Prix",
+   "circuit": "Marina Bay",
+   "file": "2023/2023_15_R.json.gz",
+   "sizeKb": 507,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 14,
+   "raceName": "Italian Grand Prix",
+   "circuit": "Monza",
+   "file": "2023/2023_14_R.json.gz",
+   "sizeKb": 394,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 13,
+   "raceName": "Dutch Grand Prix",
+   "circuit": "Zandvoort",
+   "file": "2023/2023_13_R.json.gz",
+   "sizeKb": 514,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 12,
+   "raceName": "Belgian Grand Prix",
+   "circuit": "Spa-Francorchamps",
+   "file": "2023/2023_12_R.json.gz",
+   "sizeKb": 440,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 11,
+   "raceName": "Hungarian Grand Prix",
+   "circuit": "Budapest",
+   "file": "2023/2023_11_R.json.gz",
+   "sizeKb": 468,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 10,
+   "raceName": "British Grand Prix",
+   "circuit": "Silverstone",
+   "file": "2023/2023_10_R.json.gz",
+   "sizeKb": 436,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 9,
+   "raceName": "Austrian Grand Prix",
+   "circuit": "Spielberg",
+   "file": "2023/2023_09_R.json.gz",
+   "sizeKb": 441,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 8,
+   "raceName": "Canadian Grand Prix",
+   "circuit": "Montr\u00e9al",
+   "file": "2023/2023_08_R.json.gz",
+   "sizeKb": 478,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 7,
+   "raceName": "Spanish Grand Prix",
+   "circuit": "Barcelona",
+   "file": "2023/2023_07_R.json.gz",
+   "sizeKb": 476,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 6,
+   "raceName": "Monaco Grand Prix",
+   "circuit": "Monaco",
+   "file": "2023/2023_06_R.json.gz",
+   "sizeKb": 545,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 5,
+   "raceName": "Miami Grand Prix",
+   "circuit": "Miami",
+   "file": "2023/2023_05_R.json.gz",
+   "sizeKb": 459,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 4,
+   "raceName": "Azerbaijan Grand Prix",
+   "circuit": "Baku",
+   "file": "2023/2023_04_R.json.gz",
+   "sizeKb": 508,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 3,
+   "raceName": "Australian Grand Prix",
+   "circuit": "Melbourne",
+   "file": "2023/2023_03_R.json.gz",
+   "sizeKb": 465,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 2,
+   "raceName": "Saudi Arabian Grand Prix",
+   "circuit": "Jeddah",
+   "file": "2023/2023_02_R.json.gz",
+   "sizeKb": 442,
+   "posSource": "lap"
+  },
+  {
+   "year": 2023,
+   "round": 1,
+   "raceName": "Bahrain Grand Prix",
+   "circuit": "Sakhir",
+   "file": "2023/2023_01_R.json.gz",
+   "sizeKb": 454,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 20,
+   "raceName": "Mexico City Grand Prix",
+   "circuit": "Mexico City",
+   "file": "2022/2022_20_R.json.gz",
+   "sizeKb": 522,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 19,
+   "raceName": "United States Grand Prix",
+   "circuit": "Austin",
+   "file": "2022/2022_19_R.json.gz",
+   "sizeKb": 498,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 18,
+   "raceName": "Japanese Grand Prix",
+   "circuit": "Suzuka",
+   "file": "2022/2022_18_R.json.gz",
+   "sizeKb": 305,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 17,
+   "raceName": "Singapore Grand Prix",
+   "circuit": "Marina Bay",
+   "file": "2022/2022_17_R.json.gz",
+   "sizeKb": 537,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 16,
+   "raceName": "Italian Grand Prix",
+   "circuit": "Monza",
+   "file": "2022/2022_16_R.json.gz",
+   "sizeKb": 410,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 15,
+   "raceName": "Dutch Grand Prix",
+   "circuit": "Zandvoort",
+   "file": "2022/2022_15_R.json.gz",
+   "sizeKb": 479,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 14,
+   "raceName": "Belgian Grand Prix",
+   "circuit": "Spa-Francorchamps",
+   "file": "2022/2022_14_R.json.gz",
+   "sizeKb": 444,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 13,
+   "raceName": "Hungarian Grand Prix",
+   "circuit": "Budapest",
+   "file": "2022/2022_13_R.json.gz",
+   "sizeKb": 526,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 12,
+   "raceName": "French Grand Prix",
+   "circuit": "Le Castellet",
+   "file": "2022/2022_12_R.json.gz",
+   "sizeKb": 460,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 11,
+   "raceName": "Austrian Grand Prix",
+   "circuit": "Spielberg",
+   "file": "2022/2022_11_R.json.gz",
+   "sizeKb": 430,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 10,
+   "raceName": "British Grand Prix",
+   "circuit": "Silverstone",
+   "file": "2022/2022_10_R.json.gz",
+   "sizeKb": 397,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 9,
+   "raceName": "Canadian Grand Prix",
+   "circuit": "Montr\u00e9al",
+   "file": "2022/2022_09_R.json.gz",
+   "sizeKb": 470,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 8,
+   "raceName": "Azerbaijan Grand Prix",
+   "circuit": "Baku",
+   "file": "2022/2022_08_R.json.gz",
+   "sizeKb": 481,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 7,
+   "raceName": "Monaco Grand Prix",
+   "circuit": "Monaco",
+   "file": "2022/2022_07_R.json.gz",
+   "sizeKb": 476,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 6,
+   "raceName": "Spanish Grand Prix",
+   "circuit": "Barcelona",
+   "file": "2022/2022_06_R.json.gz",
+   "sizeKb": 497,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 5,
+   "raceName": "Miami Grand Prix",
+   "circuit": "Miami",
+   "file": "2022/2022_05_R.json.gz",
+   "sizeKb": 457,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 4,
+   "raceName": "Emilia Romagna Grand Prix",
+   "circuit": "Imola",
+   "file": "2022/2022_04_R.json.gz",
+   "sizeKb": 465,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 3,
+   "raceName": "Australian Grand Prix",
+   "circuit": "Melbourne",
+   "file": "2022/2022_03_R.json.gz",
+   "sizeKb": 447,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 2,
+   "raceName": "Saudi Arabian Grand Prix",
+   "circuit": "Jeddah",
+   "file": "2022/2022_02_R.json.gz",
+   "sizeKb": 401,
+   "posSource": "lap"
+  },
+  {
+   "year": 2022,
+   "round": 1,
+   "raceName": "Bahrain Grand Prix",
+   "circuit": "Sakhir",
+   "file": "2022/2022_01_R.json.gz",
+   "sizeKb": 496,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 22,
+   "raceName": "Abu Dhabi Grand Prix",
+   "circuit": "Yas Island",
+   "file": "2021/2021_22_R.json.gz",
+   "sizeKb": 417,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 21,
+   "raceName": "Saudi Arabian Grand Prix",
+   "circuit": "Jeddah",
+   "file": "2021/2021_21_R.json.gz",
+   "sizeKb": 463,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 20,
+   "raceName": "Qatar Grand Prix",
+   "circuit": "Lusail",
+   "file": "2021/2021_20_R.json.gz",
+   "sizeKb": 453,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 19,
+   "raceName": "S\u00e3o Paulo Grand Prix",
+   "circuit": "S\u00e3o Paulo",
+   "file": "2021/2021_19_R.json.gz",
+   "sizeKb": 473,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 18,
+   "raceName": "Mexico City Grand Prix",
+   "circuit": "Mexico City",
+   "file": "2021/2021_18_R.json.gz",
+   "sizeKb": 476,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 17,
+   "raceName": "United States Grand Prix",
+   "circuit": "Austin",
+   "file": "2021/2021_17_R.json.gz",
+   "sizeKb": 489,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 16,
+   "raceName": "Turkish Grand Prix",
+   "circuit": "Istanbul",
+   "file": "2021/2021_16_R.json.gz",
+   "sizeKb": 493,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 15,
+   "raceName": "Russian Grand Prix",
+   "circuit": "Sochi",
+   "file": "2021/2021_15_R.json.gz",
+   "sizeKb": 505,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 14,
+   "raceName": "Italian Grand Prix",
+   "circuit": "Monza",
+   "file": "2021/2021_14_R.json.gz",
+   "sizeKb": 384,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 13,
+   "raceName": "Dutch Grand Prix",
+   "circuit": "Zandvoort",
+   "file": "2021/2021_13_R.json.gz",
+   "sizeKb": 444,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 11,
+   "raceName": "Hungarian Grand Prix",
+   "circuit": "Budapest",
+   "file": "2021/2021_11_R.json.gz",
+   "sizeKb": 391,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 10,
+   "raceName": "British Grand Prix",
+   "circuit": "Silverstone",
+   "file": "2021/2021_10_R.json.gz",
+   "sizeKb": 452,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 9,
+   "raceName": "Austrian Grand Prix",
+   "circuit": "Spielberg",
+   "file": "2021/2021_09_R.json.gz",
+   "sizeKb": 427,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 8,
+   "raceName": "Styrian Grand Prix",
+   "circuit": "Spielberg",
+   "file": "2021/2021_08_R.json.gz",
+   "sizeKb": 408,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 7,
+   "raceName": "French Grand Prix",
+   "circuit": "Le Castellet",
+   "file": "2021/2021_07_R.json.gz",
+   "sizeKb": 491,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 6,
+   "raceName": "Azerbaijan Grand Prix",
+   "circuit": "Baku",
+   "file": "2021/2021_06_R.json.gz",
+   "sizeKb": 539,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 5,
+   "raceName": "Monaco Grand Prix",
+   "circuit": "Monte Carlo",
+   "file": "2021/2021_05_R.json.gz",
+   "sizeKb": 463,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 4,
+   "raceName": "Spanish Grand Prix",
+   "circuit": "Barcelona",
+   "file": "2021/2021_04_R.json.gz",
+   "sizeKb": 480,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 3,
+   "raceName": "Portuguese Grand Prix",
+   "circuit": "Portim\u00e3o",
+   "file": "2021/2021_03_R.json.gz",
+   "sizeKb": 472,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 2,
+   "raceName": "Emilia Romagna Grand Prix",
+   "circuit": "Imola",
+   "file": "2021/2021_02_R.json.gz",
+   "sizeKb": 500,
+   "posSource": "lap"
+  },
+  {
+   "year": 2021,
+   "round": 1,
+   "raceName": "Bahrain Grand Prix",
+   "circuit": "Sakhir",
+   "file": "2021/2021_01_R.json.gz",
+   "sizeKb": 439,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 17,
+   "raceName": "Abu Dhabi Grand Prix",
+   "circuit": "Yas Island",
+   "file": "2020/2020_17_R.json.gz",
+   "sizeKb": 509,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 16,
+   "raceName": "Sakhir Grand Prix",
+   "circuit": "Sakhir",
+   "file": "2020/2020_16_R.json.gz",
+   "sizeKb": 412,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 15,
+   "raceName": "Bahrain Grand Prix",
+   "circuit": "Sakhir",
+   "file": "2020/2020_15_R.json.gz",
+   "sizeKb": 494,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 14,
+   "raceName": "Turkish Grand Prix",
+   "circuit": "Istanbul",
+   "file": "2020/2020_14_R.json.gz",
+   "sizeKb": 523,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 13,
+   "raceName": "Emilia Romagna Grand Prix",
+   "circuit": "Imola",
+   "file": "2020/2020_13_R.json.gz",
+   "sizeKb": 438,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 12,
+   "raceName": "Portuguese Grand Prix",
+   "circuit": "Portim\u00e3o",
+   "file": "2020/2020_12_R.json.gz",
+   "sizeKb": 467,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 11,
+   "raceName": "Eifel Grand Prix",
+   "circuit": "N\u00fcrburgring",
+   "file": "2020/2020_11_R.json.gz",
+   "sizeKb": 454,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 10,
+   "raceName": "Russian Grand Prix",
+   "circuit": "Sochi",
+   "file": "2020/2020_10_R.json.gz",
+   "sizeKb": 483,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 9,
+   "raceName": "Tuscan Grand Prix",
+   "circuit": "Mugello",
+   "file": "2020/2020_09_R.json.gz",
+   "sizeKb": 367,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 8,
+   "raceName": "Italian Grand Prix",
+   "circuit": "Monza",
+   "file": "2020/2020_08_R.json.gz",
+   "sizeKb": 414,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 7,
+   "raceName": "Belgian Grand Prix",
+   "circuit": "Spa-Francorchamps",
+   "file": "2020/2020_07_R.json.gz",
+   "sizeKb": 420,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 6,
+   "raceName": "Spanish Grand Prix",
+   "circuit": "Barcelona",
+   "file": "2020/2020_06_R.json.gz",
+   "sizeKb": 484,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 5,
+   "raceName": "70th Anniversary Grand Prix",
+   "circuit": "Silverstone",
+   "file": "2020/2020_05_R.json.gz",
+   "sizeKb": 434,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 4,
+   "raceName": "British Grand Prix",
+   "circuit": "Silverstone",
+   "file": "2020/2020_04_R.json.gz",
+   "sizeKb": 418,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 3,
+   "raceName": "Hungarian Grand Prix",
+   "circuit": "Budapest",
+   "file": "2020/2020_03_R.json.gz",
+   "sizeKb": 491,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 2,
+   "raceName": "Styrian Grand Prix",
+   "circuit": "Spielberg",
+   "file": "2020/2020_02_R.json.gz",
+   "sizeKb": 389,
+   "posSource": "lap"
+  },
+  {
+   "year": 2020,
+   "round": 1,
+   "raceName": "Austrian Grand Prix",
+   "circuit": "Spielberg",
+   "file": "2020/2020_01_R.json.gz",
+   "sizeKb": 363,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 21,
+   "raceName": "Abu Dhabi Grand Prix",
+   "circuit": "Yas Island",
+   "file": "2019/2019_21_R.json.gz",
+   "sizeKb": 508,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 20,
+   "raceName": "Brazilian Grand Prix",
+   "circuit": "S\u00e3o Paulo",
+   "file": "2019/2019_20_R.json.gz",
+   "sizeKb": 469,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 19,
+   "raceName": "United States Grand Prix",
+   "circuit": "Austin",
+   "file": "2019/2019_19_R.json.gz",
+   "sizeKb": 476,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 18,
+   "raceName": "Mexican Grand Prix",
+   "circuit": "Mexico City",
+   "file": "2019/2019_18_R.json.gz",
+   "sizeKb": 505,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 17,
+   "raceName": "Japanese Grand Prix",
+   "circuit": "Suzuka",
+   "file": "2019/2019_17_R.json.gz",
+   "sizeKb": 438,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 16,
+   "raceName": "Russian Grand Prix",
+   "circuit": "Sochi",
+   "file": "2019/2019_16_R.json.gz",
+   "sizeKb": 452,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 15,
+   "raceName": "Singapore Grand Prix",
+   "circuit": "Singapore",
+   "file": "2019/2019_15_R.json.gz",
+   "sizeKb": 599,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 14,
+   "raceName": "Italian Grand Prix",
+   "circuit": "Monza",
+   "file": "2019/2019_14_R.json.gz",
+   "sizeKb": 395,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 13,
+   "raceName": "Belgian Grand Prix",
+   "circuit": "Spa-Francorchamps",
+   "file": "2019/2019_13_R.json.gz",
+   "sizeKb": 426,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 12,
+   "raceName": "Hungarian Grand Prix",
+   "circuit": "Budapest",
+   "file": "2019/2019_12_R.json.gz",
+   "sizeKb": 493,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 11,
+   "raceName": "German Grand Prix",
+   "circuit": "Hockenheim",
+   "file": "2019/2019_11_R.json.gz",
+   "sizeKb": 456,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 10,
+   "raceName": "British Grand Prix",
+   "circuit": "Silverstone",
+   "file": "2019/2019_10_R.json.gz",
+   "sizeKb": 394,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 9,
+   "raceName": "Austrian Grand Prix",
+   "circuit": "Spielberg",
+   "file": "2019/2019_09_R.json.gz",
+   "sizeKb": 434,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 8,
+   "raceName": "French Grand Prix",
+   "circuit": "Le Castellet",
+   "file": "2019/2019_08_R.json.gz",
+   "sizeKb": 471,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 7,
+   "raceName": "Canadian Grand Prix",
+   "circuit": "Montr\u00e9al",
+   "file": "2019/2019_07_R.json.gz",
+   "sizeKb": 451,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 6,
+   "raceName": "Monaco Grand Prix",
+   "circuit": "Monte Carlo",
+   "file": "2019/2019_06_R.json.gz",
+   "sizeKb": 501,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 5,
+   "raceName": "Spanish Grand Prix",
+   "circuit": "Barcelona",
+   "file": "2019/2019_05_R.json.gz",
+   "sizeKb": 495,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 4,
+   "raceName": "Azerbaijan Grand Prix",
+   "circuit": "Baku",
+   "file": "2019/2019_04_R.json.gz",
+   "sizeKb": 498,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 3,
+   "raceName": "Chinese Grand Prix",
+   "circuit": "Shanghai",
+   "file": "2019/2019_03_R.json.gz",
+   "sizeKb": 470,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 2,
+   "raceName": "Bahrain Grand Prix",
+   "circuit": "Sakhir",
+   "file": "2019/2019_02_R.json.gz",
+   "sizeKb": 457,
+   "posSource": "lap"
+  },
+  {
+   "year": 2019,
+   "round": 1,
+   "raceName": "Australian Grand Prix",
+   "circuit": "Melbourne",
+   "file": "2019/2019_01_R.json.gz",
+   "sizeKb": 433,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 21,
+   "raceName": "Abu Dhabi Grand Prix",
+   "circuit": "Yas Marina",
+   "file": "2018/2018_21_R.json.gz",
+   "sizeKb": 472,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 20,
+   "raceName": "Brazilian Grand Prix",
+   "circuit": "S\u00e3o Paulo",
+   "file": "2018/2018_20_R.json.gz",
+   "sizeKb": 431,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 19,
+   "raceName": "Mexican Grand Prix",
+   "circuit": "Mexico City",
+   "file": "2018/2018_19_R.json.gz",
+   "sizeKb": 473,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 18,
+   "raceName": "United States Grand Prix",
+   "circuit": "Austin",
+   "file": "2018/2018_18_R.json.gz",
+   "sizeKb": 434,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 17,
+   "raceName": "Japanese Grand Prix",
+   "circuit": "Suzuka",
+   "file": "2018/2018_17_R.json.gz",
+   "sizeKb": 446,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 16,
+   "raceName": "Russian Grand Prix",
+   "circuit": "Sochi",
+   "file": "2018/2018_16_R.json.gz",
+   "sizeKb": 453,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 15,
+   "raceName": "Singapore Grand Prix",
+   "circuit": "Singapore",
+   "file": "2018/2018_15_R.json.gz",
+   "sizeKb": 562,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 13,
+   "raceName": "Belgian Grand Prix",
+   "circuit": "Spa-Francorchamps",
+   "file": "2018/2018_13_R.json.gz",
+   "sizeKb": 374,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 12,
+   "raceName": "Hungarian Grand Prix",
+   "circuit": "Budapest",
+   "file": "2018/2018_12_R.json.gz",
+   "sizeKb": 455,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 11,
+   "raceName": "German Grand Prix",
+   "circuit": "Hockenheim",
+   "file": "2018/2018_11_R.json.gz",
+   "sizeKb": 460,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 10,
+   "raceName": "British Grand Prix",
+   "circuit": "Silverstone",
+   "file": "2018/2018_10_R.json.gz",
+   "sizeKb": 412,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 9,
+   "raceName": "Austrian Grand Prix",
+   "circuit": "Spielberg",
+   "file": "2018/2018_09_R.json.gz",
+   "sizeKb": 386,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 8,
+   "raceName": "French Grand Prix",
+   "circuit": "Le Castellet",
+   "file": "2018/2018_08_R.json.gz",
+   "sizeKb": 443,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 7,
+   "raceName": "Canadian Grand Prix",
+   "circuit": "Montr\u00e9al",
+   "file": "2018/2018_07_R.json.gz",
+   "sizeKb": 424,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 6,
+   "raceName": "Monaco Grand Prix",
+   "circuit": "Monte Carlo",
+   "file": "2018/2018_06_R.json.gz",
+   "sizeKb": 498,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 5,
+   "raceName": "Spanish Grand Prix",
+   "circuit": "Barcelona",
+   "file": "2018/2018_05_R.json.gz",
+   "sizeKb": 405,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 4,
+   "raceName": "Azerbaijan Grand Prix",
+   "circuit": "Baku",
+   "file": "2018/2018_04_R.json.gz",
+   "sizeKb": 485,
+   "posSource": "lap"
+  },
+  {
+   "year": 2018,
+   "round": 3,
+   "raceName": "Chinese Grand Prix",
+   "circuit": "Shanghai",
+   "file": "2018/2018_03_R.json.gz",
+   "sizeKb": 513,
+   "posSource": "lap"
   }
  ]
 }
