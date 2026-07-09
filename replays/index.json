@@ -1,0 +1,197 @@
+{
+ "version": 1,
+ "replays": [
+  {
+   "year": 2024,
+   "round": 24,
+   "raceName": "Abu Dhabi Grand Prix",
+   "circuit": "Yas Island",
+   "file": "2024/2024_24_R.json.gz",
+   "sizeKb": 417
+  },
+  {
+   "year": 2024,
+   "round": 23,
+   "raceName": "Qatar Grand Prix",
+   "circuit": "Lusail",
+   "file": "2024/2024_23_R.json.gz",
+   "sizeKb": 417
+  },
+  {
+   "year": 2024,
+   "round": 22,
+   "raceName": "Las Vegas Grand Prix",
+   "circuit": "Las Vegas",
+   "file": "2024/2024_22_R.json.gz",
+   "sizeKb": 411
+  },
+  {
+   "year": 2024,
+   "round": 21,
+   "raceName": "S\u00e3o Paulo Grand Prix",
+   "circuit": "S\u00e3o Paulo",
+   "file": "2024/2024_21_R.json.gz",
+   "sizeKb": 458
+  },
+  {
+   "year": 2024,
+   "round": 20,
+   "raceName": "Mexico City Grand Prix",
+   "circuit": "Mexico City",
+   "file": "2024/2024_20_R.json.gz",
+   "sizeKb": 471
+  },
+  {
+   "year": 2024,
+   "round": 19,
+   "raceName": "United States Grand Prix",
+   "circuit": "Austin",
+   "file": "2024/2024_19_R.json.gz",
+   "sizeKb": 494
+  },
+  {
+   "year": 2024,
+   "round": 18,
+   "raceName": "Singapore Grand Prix",
+   "circuit": "Marina Bay",
+   "file": "2024/2024_18_R.json.gz",
+   "sizeKb": 523
+  },
+  {
+   "year": 2024,
+   "round": 17,
+   "raceName": "Azerbaijan Grand Prix",
+   "circuit": "Baku",
+   "file": "2024/2024_17_R.json.gz",
+   "sizeKb": 514
+  },
+  {
+   "year": 2024,
+   "round": 16,
+   "raceName": "Italian Grand Prix",
+   "circuit": "Monza",
+   "file": "2024/2024_16_R.json.gz",
+   "sizeKb": 400
+  },
+  {
+   "year": 2024,
+   "round": 15,
+   "raceName": "Dutch Grand Prix",
+   "circuit": "Zandvoort",
+   "file": "2024/2024_15_R.json.gz",
+   "sizeKb": 464
+  },
+  {
+   "year": 2024,
+   "round": 14,
+   "raceName": "Belgian Grand Prix",
+   "circuit": "Spa-Francorchamps",
+   "file": "2024/2024_14_R.json.gz",
+   "sizeKb": 438
+  },
+  {
+   "year": 2024,
+   "round": 13,
+   "raceName": "Hungarian Grand Prix",
+   "circuit": "Budapest",
+   "file": "2024/2024_13_R.json.gz",
+   "sizeKb": 505
+  },
+  {
+   "year": 2024,
+   "round": 12,
+   "raceName": "British Grand Prix",
+   "circuit": "Silverstone",
+   "file": "2024/2024_12_R.json.gz",
+   "sizeKb": 424
+  },
+  {
+   "year": 2024,
+   "round": 11,
+   "raceName": "Austrian Grand Prix",
+   "circuit": "Spielberg",
+   "file": "2024/2024_11_R.json.gz",
+   "sizeKb": 451
+  },
+  {
+   "year": 2024,
+   "round": 10,
+   "raceName": "Spanish Grand Prix",
+   "circuit": "Barcelona",
+   "file": "2024/2024_10_R.json.gz",
+   "sizeKb": 477
+  },
+  {
+   "year": 2024,
+   "round": 9,
+   "raceName": "Canadian Grand Prix",
+   "circuit": "Montr\u00e9al",
+   "file": "2024/2024_09_R.json.gz",
+   "sizeKb": 517
+  },
+  {
+   "year": 2024,
+   "round": 8,
+   "raceName": "Monaco Grand Prix",
+   "circuit": "Monaco",
+   "file": "2024/2024_08_R.json.gz",
+   "sizeKb": 443
+  },
+  {
+   "year": 2024,
+   "round": 7,
+   "raceName": "Emilia Romagna Grand Prix",
+   "circuit": "Imola",
+   "file": "2024/2024_07_R.json.gz",
+   "sizeKb": 469
+  },
+  {
+   "year": 2024,
+   "round": 6,
+   "raceName": "Miami Grand Prix",
+   "circuit": "Miami",
+   "file": "2024/2024_06_R.json.gz",
+   "sizeKb": 464
+  },
+  {
+   "year": 2024,
+   "round": 5,
+   "raceName": "Chinese Grand Prix",
+   "circuit": "Shanghai",
+   "file": "2024/2024_05_R.json.gz",
+   "sizeKb": 507
+  },
+  {
+   "year": 2024,
+   "round": 4,
+   "raceName": "Japanese Grand Prix",
+   "circuit": "Suzuka",
+   "file": "2024/2024_04_R.json.gz",
+   "sizeKb": 431
+  },
+  {
+   "year": 2024,
+   "round": 3,
+   "raceName": "Australian Grand Prix",
+   "circuit": "Melbourne",
+   "file": "2024/2024_03_R.json.gz",
+   "sizeKb": 392
+  },
+  {
+   "year": 2024,
+   "round": 2,
+   "raceName": "Saudi Arabian Grand Prix",
+   "circuit": "Jeddah",
+   "file": "2024/2024_02_R.json.gz",
+   "sizeKb": 420
+  },
+  {
+   "year": 2024,
+   "round": 1,
+   "raceName": "Bahrain Grand Prix",
+   "circuit": "Sakhir",
+   "file": "2024/2024_01_R.json.gz",
+   "sizeKb": 473
+  }
+ ]
+}
