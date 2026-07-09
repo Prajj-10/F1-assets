@@ -27,12 +27,26 @@ File format (version 1) — everything the app needs for one race:
     pits      pit lane time and estimated stationary time per stop
     flags     track status segments (green/yellow/SC/VSC/red)
     weather   one sample per minute
+
+Position data (posTimeline / posSource):
+    2018-2022: FastF1 lap timing only. posTimeline updates at lap boundaries;
+               posSource = "lap".
+    2023+:     Also queries OpenF1's /position endpoint, which reports a car's
+               position the moment it changes (not just at the line). Where
+               available this replaces the per-driver lap-boundary series with
+               a denser one, so overtakes show up mid-lap; posSource = "live".
+               If OpenF1 has no matching session or the request fails, the
+               race falls back to the lap-boundary series with no error.
 """
 
 import gzip
 import json
 import math
 import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
 from pathlib import Path
 
 import numpy as np
@@ -46,6 +60,10 @@ TRACK_POINTS = 400
 
 # FastF1 only carries full car position telemetry from 2018 onward.
 FIRST_TELEMETRY_YEAR = 2018
+
+# OpenF1's /position feed (sub-lap position changes) only covers 2023+.
+OPENF1_BASE = "https://api.openf1.org/v1"
+OPENF1_FIRST_YEAR = 2023
 
 CACHE_DIR = Path("fastf1_cache")
 CACHE_DIR.mkdir(parents=True, exist_ok=True)  # FastF1 3.x requires it to exist
@@ -73,16 +91,119 @@ def _seconds(td) -> float | None:
     return td.total_seconds()
 
 
-def position_source(year: int) -> str:
+def position_source(year: int, openf1_used: bool) -> str:
     """How the race order/positions in this replay were derived.
 
-    Right now every replay uses FastF1 lap timing, so the leaderboard order
-    updates at lap boundaries ("lap") for all seasons. OpenF1's sub-lap
-    position feed (available 2023+) is not blended in yet; when it is, this
-    should return "live" for those years so the app can label them. Kept as a
-    single source of truth so the JSON never over-promises.
+    "live" only when OpenF1's sub-lap position feed was actually merged in for
+    a meaningful share of the field; otherwise "lap" (FastF1 lap timing,
+    updating at lap boundaries), which is always computed as the baseline.
     """
-    return "lap"
+    return "live" if (year >= OPENF1_FIRST_YEAR and openf1_used) else "lap"
+
+
+# Sessions list per year, fetched once and reused across every race in a
+# batch run instead of re-querying OpenF1 for each round.
+_openf1_sessions_cache: dict[int, list[dict]] = {}
+
+
+def _openf1_get(path: str, **params) -> list[dict]:
+    query = urllib.parse.urlencode(params)
+    url = f"{OPENF1_BASE}/{path}?{query}" if query else f"{OPENF1_BASE}/{path}"
+    last_exc = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(url, timeout=30) as resp:
+                return json.loads(resp.read())
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+            last_exc = exc
+            time.sleep(1.5 * (attempt + 1))
+    raise RuntimeError(f"openf1 request failed after retries: {last_exc}")
+
+
+def _openf1_session_key(year: int, race_t0_utc: pd.Timestamp) -> int | None:
+    """Match this race to its OpenF1 session_key by nearest session date.
+
+    Race weekends are on distinct calendar days, so the closest "Race" session
+    start time for the season is a reliable, unambiguous match.
+    """
+    if year not in _openf1_sessions_cache:
+        try:
+            _openf1_sessions_cache[year] = _openf1_get(
+                "sessions", year=year, session_name="Race",
+            )
+        except Exception as exc:
+            print(f"  openf1: could not list {year} sessions ({exc})")
+            _openf1_sessions_cache[year] = []
+
+    sessions = _openf1_sessions_cache[year]
+    best_key, best_diff = None, None
+    for s in sessions:
+        try:
+            d = pd.Timestamp(s["date_start"])
+        except Exception:
+            continue
+        if d.tzinfo is None:
+            d = d.tz_localize("UTC")
+        diff = abs((d - race_t0_utc).total_seconds())
+        if best_diff is None or diff < best_diff:
+            best_key, best_diff = s.get("session_key"), diff
+
+    # A day+ off means we didn't actually find this race in OpenF1.
+    if best_key is not None and best_diff is not None and best_diff < 86400:
+        return best_key
+    return None
+
+
+def fetch_openf1_positions(
+    year: int, lights_out_utc: pd.Timestamp, duration: float,
+) -> dict[str, list[list[float]]]:
+    """Sub-lap position events per driver: {"num": [[t, position], ...]}.
+
+    Never raises — any OpenF1 problem (no match, network error, empty
+    response) yields {}, and the caller keeps the FastF1 lap-boundary
+    timeline it already computed.
+    """
+    if year < OPENF1_FIRST_YEAR:
+        return {}
+
+    key = _openf1_session_key(year, lights_out_utc)
+    if key is None:
+        print("  openf1: no matching session found, using lap-boundary positions")
+        return {}
+
+    try:
+        rows = _openf1_get("position", session_key=key)
+    except Exception as exc:
+        print(f"  openf1: position fetch failed ({exc}), using lap-boundary positions")
+        return {}
+    if not rows:
+        return {}
+
+    per_driver: dict[str, list[list[float]]] = {}
+    for row in rows:
+        try:
+            t = (pd.Timestamp(row["date"]) - lights_out_utc).total_seconds()
+        except Exception:
+            continue
+        if t < -30 or t > duration + 30:
+            continue
+        num = str(row.get("driver_number"))
+        per_driver.setdefault(num, []).append(
+            [round(max(t, 0.0), 1), int(row["position"])]
+        )
+
+    for num, events in per_driver.items():
+        events.sort(key=lambda e: e[0])
+        deduped: list[list[float]] = []
+        for t, pos in events:
+            if deduped and deduped[-1][1] == pos:
+                continue
+            deduped.append([t, pos])
+        per_driver[num] = deduped
+
+    if per_driver:
+        print(f"  openf1: sub-lap positions for {len(per_driver)} drivers")
+    return per_driver
 
 
 def build_replay(year: int, rnd: int) -> dict | None:
@@ -190,6 +311,24 @@ def build_replay(year: int, rnd: int) -> dict | None:
         pos_timeline[num] = pt
         lap_timeline[num] = lt
 
+    # ---------------- sub-lap positions from OpenF1 (2023+) ----------------
+    t0 = session.t0_date
+    if t0.tzinfo is None:
+        t0 = t0.tz_localize("UTC")
+    lights_out_utc = t0 + pd.Timedelta(seconds=t_start)
+
+    openf1_events = fetch_openf1_positions(year, lights_out_utc, duration)
+    merged = 0
+    for num, events in openf1_events.items():
+        if num not in pos_timeline or not events:
+            continue
+        # Keep the grid-position seed at t=0 (pre-lap-1 order), then use
+        # OpenF1's denser event stream for everything after the start.
+        seed = [e for e in pos_timeline[num] if e[0] == 0.0][:1]
+        pos_timeline[num] = seed + [e for e in events if e[0] > 0.0]
+        merged += 1
+    openf1_used = merged >= max(1, len(frames_cars) // 2)
+
     # ---------------- stints (tyres) ----------------
     stints: dict[str, list] = {}
     for num in frames_cars:
@@ -283,7 +422,7 @@ def build_replay(year: int, rnd: int) -> dict | None:
         "raceName": str(session.event["EventName"]),
         "circuit": str(session.event["Location"]),
         "totalLaps": _clean(session.total_laps, 0),
-        "posSource": position_source(year),
+        "posSource": position_source(year, openf1_used),
         "sampleHz": SAMPLE_HZ,
         "durationS": round(duration, 1),
         "track": track,
