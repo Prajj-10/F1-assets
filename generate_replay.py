@@ -154,8 +154,53 @@ def _openf1_session_key(year: int, race_t0_utc: pd.Timestamp) -> int | None:
     return None
 
 
+def openf1_clock_offset(
+    session_key: int,
+    lights_out_utc: pd.Timestamp,
+    fastf1_lap_starts: dict[tuple[int, int], float],
+) -> float:
+    """Median offset (s) between OpenF1's clock and FastF1's telemetry clock.
+
+    The two feeds can run a few seconds apart, which makes OpenF1-sourced
+    position changes lag the FastF1 car positions on screen. We line them up on
+    a signal both report — per-driver lap start times — and return the median
+    difference, to be subtracted from OpenF1 event times. Returns 0.0 if it
+    can't be determined (then raw OpenF1 times are used, as before).
+    """
+    if not fastf1_lap_starts:
+        return 0.0
+    try:
+        rows = _openf1_get("laps", session_key=session_key)
+    except Exception:
+        return 0.0
+
+    deltas: list[float] = []
+    for row in rows:
+        start = row.get("date_start")
+        drv = row.get("driver_number")
+        lap = row.get("lap_number")
+        if start is None or drv is None or lap is None:
+            continue
+        fastf1_t = fastf1_lap_starts.get((int(drv), int(lap)))
+        if fastf1_t is None:
+            continue
+        try:
+            openf1_t = (pd.Timestamp(start) - lights_out_utc).total_seconds()
+        except Exception:
+            continue
+        deltas.append(openf1_t - fastf1_t)
+
+    if not deltas:
+        return 0.0
+    deltas.sort()
+    return deltas[len(deltas) // 2]  # median resists pit-lap/outlier noise
+
+
 def fetch_openf1_positions(
-    year: int, lights_out_utc: pd.Timestamp, duration: float,
+    year: int,
+    lights_out_utc: pd.Timestamp,
+    duration: float,
+    fastf1_lap_starts: dict[tuple[int, int], float],
 ) -> dict[str, list[list[float]]]:
     """Sub-lap position events per driver: {"num": [[t, position], ...]}.
 
@@ -171,6 +216,8 @@ def fetch_openf1_positions(
         print("  openf1: no matching session found, using lap-boundary positions")
         return {}
 
+    offset = openf1_clock_offset(key, lights_out_utc, fastf1_lap_starts)
+
     try:
         rows = _openf1_get("position", session_key=key)
     except Exception as exc:
@@ -182,7 +229,10 @@ def fetch_openf1_positions(
     per_driver: dict[str, list[list[float]]] = {}
     for row in rows:
         try:
-            t = (pd.Timestamp(row["date"]) - lights_out_utc).total_seconds()
+            # Subtract the OpenF1<->FastF1 clock offset so position changes
+            # line up with the car positions on screen.
+            t = (pd.Timestamp(row["date"]) - lights_out_utc).total_seconds() \
+                - offset
         except Exception:
             continue
         if t < -30 or t > duration + 30:
@@ -202,7 +252,8 @@ def fetch_openf1_positions(
         per_driver[num] = deduped
 
     if per_driver:
-        print(f"  openf1: sub-lap positions for {len(per_driver)} drivers")
+        print(f"  openf1: sub-lap positions for {len(per_driver)} drivers "
+              f"(clock offset {offset:+.1f}s)")
     return per_driver
 
 
@@ -317,7 +368,16 @@ def build_replay(year: int, rnd: int) -> dict | None:
         t0 = t0.tz_localize("UTC")
     lights_out_utc = t0 + pd.Timedelta(seconds=t_start)
 
-    openf1_events = fetch_openf1_positions(year, lights_out_utc, duration)
+    # Per-(driver, lap) FastF1 lap-start times, used to calibrate OpenF1's clock.
+    fastf1_lap_starts = {
+        (int(num), int(lap)): start
+        for num, lt in lap_timeline.items()
+        for (start, lap) in lt
+    }
+
+    openf1_events = fetch_openf1_positions(
+        year, lights_out_utc, duration, fastf1_lap_starts,
+    )
     merged = 0
     for num, events in openf1_events.items():
         if num not in pos_timeline or not events:
