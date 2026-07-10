@@ -7,7 +7,7 @@
    "raceName": "British Grand Prix",
    "circuit": "Silverstone",
    "file": "2026/2026_09_R.json.gz",
-   "sizeKb": 504,
+   "sizeKb": 723,
    "posSource": "live"
   },
   {
@@ -16,7 +16,7 @@
    "raceName": "Austrian Grand Prix",
    "circuit": "Spielberg",
    "file": "2026/2026_08_R.json.gz",
-   "sizeKb": 443,
+   "sizeKb": 640,
    "posSource": "live"
   },
   {
@@ -25,7 +25,7 @@
    "raceName": "Barcelona Grand Prix",
    "circuit": "Barcelona",
    "file": "2026/2026_07_R.json.gz",
-   "sizeKb": 475,
+   "sizeKb": 664,
    "posSource": "live"
   },
   {
@@ -34,7 +34,7 @@
    "raceName": "Canadian Grand Prix",
    "circuit": "Montr\u00e9al",
    "file": "2026/2026_05_R.json.gz",
-   "sizeKb": 432,
+   "sizeKb": 598,
    "posSource": "live"
   },
   {
@@ -43,7 +43,7 @@
    "raceName": "Miami Grand Prix",
    "circuit": "Miami Gardens",
    "file": "2026/2026_04_R.json.gz",
-   "sizeKb": 452,
+   "sizeKb": 654,
    "posSource": "live"
   },
   {
@@ -52,7 +52,7 @@
    "raceName": "Japanese Grand Prix",
    "circuit": "Suzuka",
    "file": "2026/2026_03_R.json.gz",
-   "sizeKb": 508,
+   "sizeKb": 733,
    "posSource": "live"
   },
   {
@@ -61,7 +61,7 @@
    "raceName": "Chinese Grand Prix",
    "circuit": "Shanghai",
    "file": "2026/2026_02_R.json.gz",
-   "sizeKb": 421,
+   "sizeKb": 585,
    "posSource": "live"
   },
   {
@@ -70,7 +70,7 @@
    "raceName": "Australian Grand Prix",
    "circuit": "Melbourne",
    "file": "2026/2026_01_R.json.gz",
-   "sizeKb": 411,
+   "sizeKb": 580,
    "posSource": "live"
   },
   {
@@ -79,7 +79,7 @@
    "raceName": "Abu Dhabi Grand Prix",
    "circuit": "Yas Island",
    "file": "2025/2025_24_R.json.gz",
-   "sizeKb": 458,
+   "sizeKb": 664,
    "posSource": "live"
   },
   {
@@ -88,7 +88,7 @@
    "raceName": "Qatar Grand Prix",
    "circuit": "Lusail",
    "file": "2025/2025_23_R.json.gz",
-   "sizeKb": 436,
+   "sizeKb": 627,
    "posSource": "live"
   },
   {
@@ -97,7 +97,7 @@
    "raceName": "Las Vegas Grand Prix",
    "circuit": "Las Vegas",
    "file": "2025/2025_22_R.json.gz",
-   "sizeKb": 382,
+   "sizeKb": 525,
    "posSource": "live"
   },
   {
@@ -106,7 +106,7 @@
    "raceName": "S\u00e3o Paulo Grand Prix",
    "circuit": "S\u00e3o Paulo",
    "file": "2025/2025_21_R.json.gz",
-   "sizeKb": 425,
+   "sizeKb": 619,
    "posSource": "live"
   },
   {
@@ -115,7 +115,7 @@
    "raceName": "Mexico City Grand Prix",
    "circuit": "Mexico City",
    "file": "2025/2025_20_R.json.gz",
-   "sizeKb": 472,
+   "sizeKb": 678,
    "posSource": "live"
   },
   {
@@ -124,7 +124,7 @@
    "raceName": "United States Grand Prix",
    "circuit": "Austin",
    "file": "2025/2025_19_R.json.gz",
-   "sizeKb": 489,
+   "sizeKb": 669,
    "posSource": "live"
   },
   {
@@ -133,7 +133,7 @@
    "raceName": "Singapore Grand Prix",
    "circuit": "Marina Bay",
    "file": "2025/2025_18_R.json.gz",
-   "sizeKb": 539,
+   "sizeKb": 755,
    "posSource": "live"
   },
   {
@@ -142,7 +142,7 @@
    "raceName": "Azerbaijan Grand Prix",
    "circuit": "Baku",
    "file": "2025/2025_17_R.json.gz",
-   "sizeKb": 511,
+   "sizeKb": 702,
    "posSource": "live"
   },
   {
@@ -151,7 +151,7 @@
    "raceName": "Italian Grand Prix",
    "circuit": "Monza",
    "file": "2025/2025_16_R.json.gz",
-   "sizeKb": 379,
+   "sizeKb": 538,
    "posSource": "live"
   },
   {
@@ -160,7 +160,7 @@
    "raceName": "Dutch Grand Prix",
    "circuit": "Zandvoort",
    "file": "2025/2025_15_R.json.gz",
-   "sizeKb": 472,
+   "sizeKb": 718,
    "posSource": "live"
   },
   {
@@ -169,7 +169,7 @@
    "raceName": "Hungarian Grand Prix",
    "circuit": "Budapest",
    "file": "2025/2025_14_R.json.gz",
-   "sizeKb": 493,
+   "sizeKb": 701,
    "posSource": "live"
   },
   {
@@ -178,7 +178,7 @@
    "raceName": "Belgian Grand Prix",
    "circuit": "Spa-Francorchamps",
    "file": "2025/2025_13_R.json.gz",
-   "sizeKb": 483,
+   "sizeKb": 670,
    "posSource": "live"
   },
   {
@@ -187,7 +187,7 @@
    "raceName": "British Grand Prix",
    "circuit": "Silverstone",
    "file": "2025/2025_12_R.json.gz",
-   "sizeKb": 426,
+   "sizeKb": 588,
    "posSource": "live"
   },
   {
@@ -196,7 +196,7 @@
    "raceName": "Austrian Grand Prix",
    "circuit": "Spielberg",
    "file": "2025/2025_11_R.json.gz",
-   "sizeKb": 364,
+   "sizeKb": 531,
    "posSource": "live"
   },
   {
@@ -205,7 +205,7 @@
    "raceName": "Canadian Grand Prix",
    "circuit": "Montr\u00e9al",
    "file": "2025/2025_10_R.json.gz",
-   "sizeKb": 472,
+   "sizeKb": 659,
    "posSource": "live"
   },
   {
@@ -214,7 +214,7 @@
    "raceName": "Spanish Grand Prix",
    "circuit": "Barcelona",
    "file": "2025/2025_09_R.json.gz",
-   "sizeKb": 454,
+   "sizeKb": 640,
    "posSource": "live"
   },
   {
@@ -223,7 +223,7 @@
    "raceName": "Monaco Grand Prix",
    "circuit": "Monaco",
    "file": "2025/2025_08_R.json.gz",
-   "sizeKb": 477,
+   "sizeKb": 676,
    "posSource": "live"
   },
   {
@@ -232,7 +232,7 @@
    "raceName": "Emilia Romagna Grand Prix",
    "circuit": "Imola",
    "file": "2025/2025_07_R.json.gz",
-   "sizeKb": 482,
+   "sizeKb": 676,
    "posSource": "live"
   },
   {
@@ -241,7 +241,7 @@
    "raceName": "Miami Grand Prix",
    "circuit": "Miami Gardens",
    "file": "2025/2025_06_R.json.gz",
-   "sizeKb": 413,
+   "sizeKb": 610,
    "posSource": "live"
   },
   {
@@ -250,7 +250,7 @@
    "raceName": "Saudi Arabian Grand Prix",
    "circuit": "Jeddah",
    "file": "2025/2025_05_R.json.gz",
-   "sizeKb": 418,
+   "sizeKb": 593,
    "posSource": "live"
   },
   {
@@ -259,7 +259,7 @@
    "raceName": "Bahrain Grand Prix",
    "circuit": "Sakhir",
    "file": "2025/2025_04_R.json.gz",
-   "sizeKb": 484,
+   "sizeKb": 743,
    "posSource": "live"
   },
   {
@@ -268,7 +268,7 @@
    "raceName": "Japanese Grand Prix",
    "circuit": "Suzuka",
    "file": "2025/2025_03_R.json.gz",
-   "sizeKb": 449,
+   "sizeKb": 651,
    "posSource": "live"
   },
   {
@@ -277,7 +277,7 @@
    "raceName": "Chinese Grand Prix",
    "circuit": "Shanghai",
    "file": "2025/2025_02_R.json.gz",
-   "sizeKb": 470,
+   "sizeKb": 647,
    "posSource": "live"
   },
   {
@@ -286,7 +286,7 @@
    "raceName": "Australian Grand Prix",
    "circuit": "Melbourne",
    "file": "2025/2025_01_R.json.gz",
-   "sizeKb": 457,
+   "sizeKb": 612,
    "posSource": "live"
   },
   {
@@ -295,7 +295,7 @@
    "raceName": "Abu Dhabi Grand Prix",
    "circuit": "Yas Island",
    "file": "2024/2024_24_R.json.gz",
-   "sizeKb": 415,
+   "sizeKb": 599,
    "posSource": "live"
   },
   {
@@ -304,7 +304,7 @@
    "raceName": "Qatar Grand Prix",
    "circuit": "Lusail",
    "file": "2024/2024_23_R.json.gz",
-   "sizeKb": 415,
+   "sizeKb": 578,
    "posSource": "live"
   },
   {
@@ -313,7 +313,7 @@
    "raceName": "Las Vegas Grand Prix",
    "circuit": "Las Vegas",
    "file": "2024/2024_22_R.json.gz",
-   "sizeKb": 410,
+   "sizeKb": 561,
    "posSource": "live"
   },
   {
@@ -322,7 +322,7 @@
    "raceName": "S\u00e3o Paulo Grand Prix",
    "circuit": "S\u00e3o Paulo",
    "file": "2024/2024_21_R.json.gz",
-   "sizeKb": 455,
+   "sizeKb": 625,
    "posSource": "live"
   },
   {
@@ -331,7 +331,7 @@
    "raceName": "Mexico City Grand Prix",
    "circuit": "Mexico City",
    "file": "2024/2024_20_R.json.gz",
-   "sizeKb": 468,
+   "sizeKb": 656,
    "posSource": "live"
   },
   {
@@ -340,7 +340,7 @@
    "raceName": "United States Grand Prix",
    "circuit": "Austin",
    "file": "2024/2024_19_R.json.gz",
-   "sizeKb": 492,
+   "sizeKb": 661,
    "posSource": "live"
   },
   {
@@ -349,7 +349,7 @@
    "raceName": "Singapore Grand Prix",
    "circuit": "Marina Bay",
    "file": "2024/2024_18_R.json.gz",
-   "sizeKb": 521,
+   "sizeKb": 729,
    "posSource": "live"
   },
   {
@@ -358,7 +358,7 @@
    "raceName": "Azerbaijan Grand Prix",
    "circuit": "Baku",
    "file": "2024/2024_17_R.json.gz",
-   "sizeKb": 512,
+   "sizeKb": 697,
    "posSource": "live"
   },
   {
@@ -367,7 +367,7 @@
    "raceName": "Italian Grand Prix",
    "circuit": "Monza",
    "file": "2024/2024_16_R.json.gz",
-   "sizeKb": 398,
+   "sizeKb": 555,
    "posSource": "live"
   },
   {
@@ -376,7 +376,7 @@
    "raceName": "Dutch Grand Prix",
    "circuit": "Zandvoort",
    "file": "2024/2024_15_R.json.gz",
-   "sizeKb": 460,
+   "sizeKb": 697,
    "posSource": "live"
   },
   {
@@ -385,7 +385,7 @@
    "raceName": "Belgian Grand Prix",
    "circuit": "Spa-Francorchamps",
    "file": "2024/2024_14_R.json.gz",
-   "sizeKb": 436,
+   "sizeKb": 608,
    "posSource": "live"
   },
   {
@@ -394,7 +394,7 @@
    "raceName": "Hungarian Grand Prix",
    "circuit": "Budapest",
    "file": "2024/2024_13_R.json.gz",
-   "sizeKb": 502,
+   "sizeKb": 701,
    "posSource": "live"
   },
   {
@@ -403,7 +403,7 @@
    "raceName": "British Grand Prix",
    "circuit": "Silverstone",
    "file": "2024/2024_12_R.json.gz",
-   "sizeKb": 421,
+   "sizeKb": 596,
    "posSource": "live"
   },
   {
@@ -412,7 +412,7 @@
    "raceName": "Austrian Grand Prix",
    "circuit": "Spielberg",
    "file": "2024/2024_11_R.json.gz",
-   "sizeKb": 447,
+   "sizeKb": 646,
    "posSource": "live"
   },
   {
@@ -421,7 +421,7 @@
    "raceName": "Spanish Grand Prix",
    "circuit": "Barcelona",
    "file": "2024/2024_10_R.json.gz",
-   "sizeKb": 475,
+   "sizeKb": 675,
    "posSource": "live"
   },
   {
@@ -430,7 +430,7 @@
    "raceName": "Canadian Grand Prix",
    "circuit": "Montr\u00e9al",
    "file": "2024/2024_09_R.json.gz",
-   "sizeKb": 514,
+   "sizeKb": 696,
    "posSource": "live"
   },
   {
@@ -439,7 +439,7 @@
    "raceName": "Monaco Grand Prix",
    "circuit": "Monaco",
    "file": "2024/2024_08_R.json.gz",
-   "sizeKb": 439,
+   "sizeKb": 620,
    "posSource": "live"
   },
   {
@@ -448,7 +448,7 @@
    "raceName": "Emilia Romagna Grand Prix",
    "circuit": "Imola",
    "file": "2024/2024_07_R.json.gz",
-   "sizeKb": 466,
+   "sizeKb": 649,
    "posSource": "live"
   },
   {
@@ -457,7 +457,7 @@
    "raceName": "Miami Grand Prix",
    "circuit": "Miami",
    "file": "2024/2024_06_R.json.gz",
-   "sizeKb": 461,
+   "sizeKb": 671,
    "posSource": "live"
   },
   {
@@ -466,7 +466,7 @@
    "raceName": "Chinese Grand Prix",
    "circuit": "Shanghai",
    "file": "2024/2024_05_R.json.gz",
-   "sizeKb": 505,
+   "sizeKb": 683,
    "posSource": "live"
   },
   {
@@ -475,7 +475,7 @@
    "raceName": "Japanese Grand Prix",
    "circuit": "Suzuka",
    "file": "2024/2024_04_R.json.gz",
-   "sizeKb": 430,
+   "sizeKb": 599,
    "posSource": "live"
   },
   {
@@ -484,7 +484,7 @@
    "raceName": "Australian Grand Prix",
    "circuit": "Melbourne",
    "file": "2024/2024_03_R.json.gz",
-   "sizeKb": 390,
+   "sizeKb": 553,
    "posSource": "live"
   },
   {
@@ -493,7 +493,7 @@
    "raceName": "Saudi Arabian Grand Prix",
    "circuit": "Jeddah",
    "file": "2024/2024_02_R.json.gz",
-   "sizeKb": 417,
+   "sizeKb": 585,
    "posSource": "live"
   },
   {
@@ -502,7 +502,7 @@
    "raceName": "Bahrain Grand Prix",
    "circuit": "Sakhir",
    "file": "2024/2024_01_R.json.gz",
-   "sizeKb": 470,
+   "sizeKb": 704,
    "posSource": "live"
   },
   {
@@ -511,7 +511,7 @@
    "raceName": "Abu Dhabi Grand Prix",
    "circuit": "Yas Island",
    "file": "2023/2023_22_R.json.gz",
-   "sizeKb": 463,
+   "sizeKb": 672,
    "posSource": "live"
   },
   {
@@ -520,7 +520,7 @@
    "raceName": "Las Vegas Grand Prix",
    "circuit": "Las Vegas",
    "file": "2023/2023_21_R.json.gz",
-   "sizeKb": 449,
+   "sizeKb": 601,
    "posSource": "live"
   },
   {
@@ -529,7 +529,7 @@
    "raceName": "S\u00e3o Paulo Grand Prix",
    "circuit": "S\u00e3o Paulo",
    "file": "2023/2023_20_R.json.gz",
-   "sizeKb": 396,
+   "sizeKb": 550,
    "posSource": "live"
   },
   {
@@ -538,7 +538,7 @@
    "raceName": "Mexico City Grand Prix",
    "circuit": "Mexico City",
    "file": "2023/2023_19_R.json.gz",
-   "sizeKb": 505,
+   "sizeKb": 710,
    "posSource": "live"
   },
   {
@@ -547,7 +547,7 @@
    "raceName": "United States Grand Prix",
    "circuit": "Austin",
    "file": "2023/2023_18_R.json.gz",
-   "sizeKb": 474,
+   "sizeKb": 637,
    "posSource": "live"
   },
   {
@@ -556,7 +556,7 @@
    "raceName": "Qatar Grand Prix",
    "circuit": "Lusail",
    "file": "2023/2023_17_R.json.gz",
-   "sizeKb": 426,
+   "sizeKb": 600,
    "posSource": "live"
   },
   {
@@ -565,7 +565,7 @@
    "raceName": "Japanese Grand Prix",
    "circuit": "Suzuka",
    "file": "2023/2023_16_R.json.gz",
-   "sizeKb": 425,
+   "sizeKb": 591,
    "posSource": "live"
   },
   {
@@ -574,7 +574,7 @@
    "raceName": "Singapore Grand Prix",
    "circuit": "Marina Bay",
    "file": "2023/2023_15_R.json.gz",
-   "sizeKb": 505,
+   "sizeKb": 699,
    "posSource": "live"
   },
   {
@@ -583,7 +583,7 @@
    "raceName": "Italian Grand Prix",
    "circuit": "Monza",
    "file": "2023/2023_14_R.json.gz",
-   "sizeKb": 393,
+   "sizeKb": 566,
    "posSource": "live"
   },
   {
@@ -592,7 +592,7 @@
    "raceName": "Dutch Grand Prix",
    "circuit": "Zandvoort",
    "file": "2023/2023_13_R.json.gz",
-   "sizeKb": 513,
+   "sizeKb": 750,
    "posSource": "live"
   },
   {
@@ -601,7 +601,7 @@
    "raceName": "Belgian Grand Prix",
    "circuit": "Spa-Francorchamps",
    "file": "2023/2023_12_R.json.gz",
-   "sizeKb": 439,
+   "sizeKb": 608,
    "posSource": "live"
   },
   {
@@ -610,7 +610,7 @@
    "raceName": "Hungarian Grand Prix",
    "circuit": "Budapest",
    "file": "2023/2023_11_R.json.gz",
-   "sizeKb": 465,
+   "sizeKb": 648,
    "posSource": "live"
   },
   {
@@ -619,7 +619,7 @@
    "raceName": "British Grand Prix",
    "circuit": "Silverstone",
    "file": "2023/2023_10_R.json.gz",
-   "sizeKb": 433,
+   "sizeKb": 614,
    "posSource": "live"
   },
   {
@@ -628,7 +628,7 @@
    "raceName": "Austrian Grand Prix",
    "circuit": "Spielberg",
    "file": "2023/2023_09_R.json.gz",
-   "sizeKb": 438,
+   "sizeKb": 628,
    "posSource": "live"
   },
   {
@@ -637,7 +637,7 @@
    "raceName": "Canadian Grand Prix",
    "circuit": "Montr\u00e9al",
    "file": "2023/2023_08_R.json.gz",
-   "sizeKb": 475,
+   "sizeKb": 652,
    "posSource": "live"
   },
   {
@@ -646,7 +646,7 @@
    "raceName": "Spanish Grand Prix",
    "circuit": "Barcelona",
    "file": "2023/2023_07_R.json.gz",
-   "sizeKb": 473,
+   "sizeKb": 675,
    "posSource": "live"
   },
   {
@@ -655,7 +655,7 @@
    "raceName": "Monaco Grand Prix",
    "circuit": "Monaco",
    "file": "2023/2023_06_R.json.gz",
-   "sizeKb": 540,
+   "sizeKb": 765,
    "posSource": "live"
   },
   {
@@ -664,7 +664,7 @@
    "raceName": "Miami Grand Prix",
    "circuit": "Miami",
    "file": "2023/2023_05_R.json.gz",
-   "sizeKb": 457,
+   "sizeKb": 672,
    "posSource": "live"
   },
   {
@@ -673,7 +673,7 @@
    "raceName": "Azerbaijan Grand Prix",
    "circuit": "Baku",
    "file": "2023/2023_04_R.json.gz",
-   "sizeKb": 505,
+   "sizeKb": 687,
    "posSource": "live"
   },
   {
@@ -682,7 +682,7 @@
    "raceName": "Australian Grand Prix",
    "circuit": "Melbourne",
    "file": "2023/2023_03_R.json.gz",
-   "sizeKb": 463,
+   "sizeKb": 626,
    "posSource": "live"
   },
   {
@@ -691,7 +691,7 @@
    "raceName": "Saudi Arabian Grand Prix",
    "circuit": "Jeddah",
    "file": "2023/2023_02_R.json.gz",
-   "sizeKb": 440,
+   "sizeKb": 619,
    "posSource": "live"
   },
   {
@@ -700,7 +700,7 @@
    "raceName": "Bahrain Grand Prix",
    "circuit": "Sakhir",
    "file": "2023/2023_01_R.json.gz",
-   "sizeKb": 452,
+   "sizeKb": 673,
    "posSource": "live"
   },
   {

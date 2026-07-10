@@ -196,32 +196,27 @@ def openf1_clock_offset(
     return deltas[len(deltas) // 2]  # median resists pit-lap/outlier noise
 
 
-def fetch_openf1_positions(
-    year: int,
-    lights_out_utc: pd.Timestamp,
-    duration: float,
-    fastf1_lap_starts: dict[tuple[int, int], float],
-) -> dict[str, list[list[float]]]:
-    """Sub-lap position events per driver: {"num": [[t, position], ...]}.
+def _num_or_none(value) -> float | None:
+    """Coerce an OpenF1 numeric field to float, or None.
 
-    Never raises — any OpenF1 problem (no match, network error, empty
-    response) yields {}, and the caller keeps the FastF1 lap-boundary
-    timeline it already computed.
+    OpenF1 returns the string "+1 LAP" (etc.) for a lapped car's interval, and
+    can return null; both become None so downstream code stays numeric.
     """
-    if year < OPENF1_FIRST_YEAR:
-        return {}
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, (int, float)):
+        return float(value)
+    return None
 
-    key = _openf1_session_key(year, lights_out_utc)
-    if key is None:
-        print("  openf1: no matching session found, using lap-boundary positions")
-        return {}
 
-    offset = openf1_clock_offset(key, lights_out_utc, fastf1_lap_starts)
-
+def _openf1_positions(
+    key: int, lights_out_utc: pd.Timestamp, duration: float, offset: float,
+) -> dict[str, list[list[float]]]:
+    """Sub-lap position events per driver: {"num": [[t, position], ...]}."""
     try:
         rows = _openf1_get("position", session_key=key)
     except Exception as exc:
-        print(f"  openf1: position fetch failed ({exc}), using lap-boundary positions")
+        print(f"  openf1: position fetch failed ({exc})")
         return {}
     if not rows:
         return {}
@@ -229,8 +224,6 @@ def fetch_openf1_positions(
     per_driver: dict[str, list[list[float]]] = {}
     for row in rows:
         try:
-            # Subtract the OpenF1<->FastF1 clock offset so position changes
-            # line up with the car positions on screen.
             t = (pd.Timestamp(row["date"]) - lights_out_utc).total_seconds() \
                 - offset
         except Exception:
@@ -252,9 +245,84 @@ def fetch_openf1_positions(
         per_driver[num] = deduped
 
     if per_driver:
-        print(f"  openf1: sub-lap positions for {len(per_driver)} drivers "
-              f"(clock offset {offset:+.1f}s)")
+        print(f"  openf1: sub-lap positions for {len(per_driver)} drivers")
     return per_driver
+
+
+def _openf1_gaps(
+    key: int, lights_out_utc: pd.Timestamp, duration: float, offset: float,
+) -> dict[str, list[list]]:
+    """Broadcast-precision gaps per driver: {"num": [[t, interval, leader], ...]}.
+
+    `interval` is the gap (s) to the car ahead, `leader` the gap to the race
+    leader. Either is None when unavailable or when the car is lapped
+    (OpenF1 reports "+1 LAP"). Updated ~every 4s by OpenF1.
+    """
+    try:
+        rows = _openf1_get("intervals", session_key=key)
+    except Exception as exc:
+        print(f"  openf1: intervals fetch failed ({exc})")
+        return {}
+    if not rows:
+        return {}
+
+    per_driver: dict[str, list[list]] = {}
+    for row in rows:
+        try:
+            t = (pd.Timestamp(row["date"]) - lights_out_utc).total_seconds() \
+                - offset
+        except Exception:
+            continue
+        if t < -30 or t > duration + 30:
+            continue
+        num = str(row.get("driver_number"))
+        interval = _num_or_none(row.get("interval"))
+        leader = _num_or_none(row.get("gap_to_leader"))
+        per_driver.setdefault(num, []).append([
+            round(max(t, 0.0), 1),
+            round(interval, 3) if interval is not None else None,
+            round(leader, 3) if leader is not None else None,
+        ])
+
+    for num, events in per_driver.items():
+        events.sort(key=lambda e: e[0])
+        deduped: list[list] = []
+        for e in events:
+            if deduped and deduped[-1][1] == e[1] and deduped[-1][2] == e[2]:
+                continue
+            deduped.append(e)
+        per_driver[num] = deduped
+
+    if per_driver:
+        print(f"  openf1: gaps for {len(per_driver)} drivers")
+    return per_driver
+
+
+def fetch_openf1(
+    year: int,
+    lights_out_utc: pd.Timestamp,
+    duration: float,
+    fastf1_lap_starts: dict[tuple[int, int], float],
+) -> tuple[dict[str, list[list[float]]], dict[str, list[list]]]:
+    """Fetch OpenF1 positions and gaps for 2023+, calibrated to FastF1's clock.
+
+    Returns (positions, gaps). Never raises — any problem (no match, network
+    error, pre-2023) yields ({}, {}) and the caller keeps its lap-boundary
+    data with no gaps.
+    """
+    if year < OPENF1_FIRST_YEAR:
+        return {}, {}
+
+    key = _openf1_session_key(year, lights_out_utc)
+    if key is None:
+        print("  openf1: no matching session found, using lap-boundary positions")
+        return {}, {}
+
+    offset = openf1_clock_offset(key, lights_out_utc, fastf1_lap_starts)
+    print(f"  openf1: session {key}, clock offset {offset:+.1f}s")
+    positions = _openf1_positions(key, lights_out_utc, duration, offset)
+    gaps = _openf1_gaps(key, lights_out_utc, duration, offset)
+    return positions, gaps
 
 
 def build_replay(year: int, rnd: int) -> dict | None:
@@ -375,7 +443,7 @@ def build_replay(year: int, rnd: int) -> dict | None:
         for (start, lap) in lt
     }
 
-    openf1_events = fetch_openf1_positions(
+    openf1_events, openf1_gaps = fetch_openf1(
         year, lights_out_utc, duration, fastf1_lap_starts,
     )
     merged = 0
@@ -490,6 +558,7 @@ def build_replay(year: int, rnd: int) -> dict | None:
         "frames": {"dt": 1.0 / SAMPLE_HZ, "cars": frames_cars},
         "posTimeline": pos_timeline,
         "lapTimeline": lap_timeline,
+        "gaps": openf1_gaps,
         "stints": stints,
         "pits": pits,
         "flags": flags,
