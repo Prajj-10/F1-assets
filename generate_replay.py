@@ -366,7 +366,7 @@ def build_replay(year: int, rnd: int) -> dict | None:
             "retiredT": ret_t,
         })
 
-    # ---------------- per-driver GPS frames (1 Hz) ----------------
+    # ---------------- per-driver GPS frames + telemetry (1 Hz) ----------------
     frames_cars = {}
     for num, pos in session.pos_data.items():
         if pos is None or len(pos) == 0:
@@ -384,16 +384,54 @@ def build_replay(year: int, rnd: int) -> dict | None:
         xi = np.interp(grid, t, x, left=np.nan, right=np.nan)
         yi = np.interp(grid, t, y, left=np.nan, right=np.nan)
 
-        # Blank everything after retirement (+30 s so the car parks visibly).
         ret = retirement_t.get(str(num))
         if ret is not None:
             xi[grid > ret + 30] = np.nan
             yi[grid > ret + 30] = np.nan
 
-        frames_cars[str(int(num))] = {
+        entry = {
             "x": [None if np.isnan(v) else int(round(v)) for v in xi],
             "y": [None if np.isnan(v) else int(round(v)) for v in yi],
         }
+
+        # Speed / throttle / brake / gear from the car telemetry stream,
+        # resampled onto the same 1 Hz grid. Optional — older/odd sessions may
+        # lack it, in which case these keys are simply omitted.
+        car = session.car_data.get(num)
+        if car is not None and len(car) > 0:
+            ct = car["SessionTime"].dt.total_seconds().to_numpy() - t_start
+
+            def _resample(col: str):
+                if col not in car:
+                    return None
+                v = car[col].to_numpy(dtype=float)
+                m = ~(np.isnan(ct) | np.isnan(v))
+                if m.sum() < 5:
+                    return None
+                cc, vv = ct[m], v[m]
+                o = np.argsort(cc)
+                r = np.interp(grid, cc[o], vv[o], left=np.nan, right=np.nan)
+                if ret is not None:
+                    r[grid > ret + 30] = np.nan
+                return r
+
+            spd = _resample("Speed")
+            thr = _resample("Throttle")
+            brk = _resample("Brake")
+            gear = _resample("nGear")
+            if spd is not None:
+                entry["spd"] = [None if np.isnan(v) else int(round(v)) for v in spd]
+            if thr is not None:
+                entry["thr"] = [
+                    None if np.isnan(v) else int(round(min(100.0, max(0.0, v))))
+                    for v in thr
+                ]
+            if brk is not None:
+                entry["brk"] = [None if np.isnan(v) else (1 if v > 0.5 else 0) for v in brk]
+            if gear is not None:
+                entry["gear"] = [None if np.isnan(v) else int(round(v)) for v in gear]
+
+        frames_cars[str(int(num))] = entry
 
     # ---------------- track polyline from the fastest lap ----------------
     if not frames_cars:
@@ -477,13 +515,17 @@ def build_replay(year: int, rnd: int) -> dict | None:
     # ---------------- pit stops ----------------
     pits: dict[str, list] = {}
     for num, car in frames_cars.items():
-        drv_laps = laps[laps["DriverNumber"] == num]
+        drv_laps = laps[laps["DriverNumber"] == num].reset_index(drop=True)
         out = []
-        for _, lap in drv_laps.iterrows():
+        for i in range(len(drv_laps)):
+            lap = drv_laps.iloc[i]
             pit_in = _seconds(lap["PitInTime"])
-            pit_out = _seconds(lap["PitOutTime"])
             if pit_in is None:
                 continue
+            # PitOutTime is recorded on the following (out) lap, not this one.
+            pit_out = None
+            if i + 1 < len(drv_laps):
+                pit_out = _seconds(drv_laps.iloc[i + 1]["PitOutTime"])
             lane_s = None
             stop_s = None
             if pit_out is not None and pit_out > pit_in:
@@ -493,9 +535,9 @@ def build_replay(year: int, rnd: int) -> dict | None:
                 i0 = max(0, int(pit_in - t_start))
                 i1 = min(len(car["x"]) - 1, int(pit_out - t_start))
                 still = 0
-                for i in range(i0, i1):
-                    x0, y0 = car["x"][i], car["y"][i]
-                    x1, y1 = car["x"][i + 1], car["y"][i + 1]
+                for j in range(i0, i1):
+                    x0, y0 = car["x"][j], car["y"][j]
+                    x1, y1 = car["x"][j + 1], car["y"][j + 1]
                     if None in (x0, y0, x1, y1):
                         continue
                     if math.hypot(x1 - x0, y1 - y0) < 20:  # <2 m/s

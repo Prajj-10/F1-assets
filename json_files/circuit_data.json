@@ -1,0 +1,163 @@
+{
+  "_comment": "Curated circuit facts for F1 Grid. Jolpica exposes none of this. Keys are Ergast/Jolpica circuit ids. Every field is optional - the app hides what is missing. lengthKm/corners/direction are stable facts. lapRecord is the field most likely to need correction: records are LAYOUT-SPECIFIC and are broken from time to time, so spot-check before you rely on them.",
+  "schema": 1,
+  "updated": "2026-07-15",
+  "circuits": {
+    "albert_park": {
+      "lengthKm": 5.278,
+      "corners": 14,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:19.813", "driver": "Charles Leclerc", "team": "Ferrari", "year": 2024 }
+    },
+    "shanghai": {
+      "lengthKm": 5.451,
+      "corners": 16,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:32.238", "driver": "Michael Schumacher", "team": "Ferrari", "year": 2004 }
+    },
+    "suzuka": {
+      "lengthKm": 5.807,
+      "corners": 18,
+      "direction": "figure-of-eight",
+      "lapRecord": { "time": "1:30.983", "driver": "Lewis Hamilton", "team": "Mercedes", "year": 2019 }
+    },
+    "bahrain": {
+      "lengthKm": 5.412,
+      "corners": 15,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:31.447", "driver": "Pedro de la Rosa", "team": "McLaren", "year": 2005 }
+    },
+    "jeddah": {
+      "lengthKm": 6.174,
+      "corners": 27,
+      "direction": "anti-clockwise",
+      "lapRecord": { "time": "1:30.734", "driver": "Lewis Hamilton", "team": "Mercedes", "year": 2021 }
+    },
+    "miami": {
+      "lengthKm": 5.412,
+      "corners": 19,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:29.708", "driver": "Max Verstappen", "team": "Red Bull", "year": 2023 }
+    },
+    "imola": {
+      "lengthKm": 4.909,
+      "corners": 19,
+      "direction": "anti-clockwise",
+      "lapRecord": { "time": "1:15.484", "driver": "Lewis Hamilton", "team": "Mercedes", "year": 2020 }
+    },
+    "monaco": {
+      "lengthKm": 3.337,
+      "corners": 19,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:12.909", "driver": "Lewis Hamilton", "team": "Mercedes", "year": 2021 }
+    },
+    "catalunya": {
+      "lengthKm": 4.657,
+      "corners": 14,
+      "direction": "clockwise",
+      "lapRecord": {
+        "time": "1:16.330",
+        "driver": "Max Verstappen",
+        "team": "Red Bull",
+        "year": 2023,
+        "layoutNote": "Set on the layout with the final chicane removed."
+      }
+    },
+    "villeneuve": {
+      "lengthKm": 4.361,
+      "corners": 14,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:13.078", "driver": "Valtteri Bottas", "team": "Mercedes", "year": 2019 }
+    },
+    "red_bull_ring": {
+      "lengthKm": 4.318,
+      "corners": 10,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:05.619", "driver": "Carlos Sainz", "team": "McLaren", "year": 2020 }
+    },
+    "silverstone": {
+      "lengthKm": 5.891,
+      "corners": 18,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:27.097", "driver": "Max Verstappen", "team": "Red Bull", "year": 2020 }
+    },
+    "spa": {
+      "lengthKm": 7.004,
+      "corners": 19,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:44.701", "driver": "Valtteri Bottas", "team": "Mercedes", "year": 2018 }
+    },
+    "hungaroring": {
+      "lengthKm": 4.381,
+      "corners": 14,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:16.627", "driver": "Lewis Hamilton", "team": "Mercedes", "year": 2020 }
+    },
+    "zandvoort": {
+      "lengthKm": 4.259,
+      "corners": 14,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:11.097", "driver": "Lewis Hamilton", "team": "Mercedes", "year": 2021 }
+    },
+    "monza": {
+      "lengthKm": 5.793,
+      "corners": 11,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:21.046", "driver": "Rubens Barrichello", "team": "Ferrari", "year": 2004 }
+    },
+    "baku": {
+      "lengthKm": 6.003,
+      "corners": 20,
+      "direction": "anti-clockwise",
+      "lapRecord": { "time": "1:43.009", "driver": "Charles Leclerc", "team": "Ferrari", "year": 2019 }
+    },
+    "marina": {
+      "lengthKm": 4.94,
+      "corners": 19,
+      "direction": "clockwise",
+      "lapRecord": {
+        "time": "1:35.867",
+        "driver": "Kevin Magnussen",
+        "team": "Haas",
+        "year": 2018,
+        "layoutNote": "Set on the pre-2023 layout; the current configuration is shorter."
+      }
+    },
+    "cota": {
+      "lengthKm": 5.513,
+      "corners": 20,
+      "direction": "anti-clockwise",
+      "lapRecord": { "time": "1:36.169", "driver": "Charles Leclerc", "team": "Ferrari", "year": 2019 }
+    },
+    "rodriguez": {
+      "lengthKm": 4.304,
+      "corners": 17,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:17.774", "driver": "Valtteri Bottas", "team": "Mercedes", "year": 2021 }
+    },
+    "interlagos": {
+      "lengthKm": 4.309,
+      "corners": 15,
+      "direction": "anti-clockwise",
+      "lapRecord": { "time": "1:10.540", "driver": "Valtteri Bottas", "team": "Mercedes", "year": 2018 }
+    },
+    "vegas": {
+      "lengthKm": 6.201,
+      "corners": 17,
+      "direction": "anti-clockwise",
+      "lapRecord": { "time": "1:35.490", "driver": "Oscar Piastri", "team": "McLaren", "year": 2023 }
+    },
+    "losail": {
+      "lengthKm": 5.419,
+      "corners": 16,
+      "direction": "clockwise",
+      "lapRecord": { "time": "1:24.319", "driver": "Max Verstappen", "team": "Red Bull", "year": 2023 }
+    },
+    "yas_marina": {
+      "lengthKm": 5.281,
+      "corners": 16,
+      "direction": "anti-clockwise",
+      "lapRecord": { "time": "1:26.103", "driver": "Max Verstappen", "team": "Red Bull", "year": 2021 }
+    }
+  }
+}

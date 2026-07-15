@@ -1,0 +1,80 @@
+{
+  "_comment": "Curated car specs for F1 Grid, current season only. Keys are the 3-letter team ids used by driver_and_team_data.json / getCarImageFolderName. Per-team power and top-speed figures are NOT public - quoting them per car would be invention, so the era-wide estimate lives under regulations.estimates and is labelled 'est.' in the app. weightKg is only present where a team actually published a number.",
+  "_todo": "regulations.estimates.topSpeedKph is intentionally absent - no sourced figure for the 2026 cars. Add one if you find a credible source, and the app will show it.",
+  "schema": 1,
+  "season": 2026,
+  "updated": "2026-07-15",
+  "regulations": {
+    "minimumWeightKg": 768,
+    "maxWheelbaseMm": 3400,
+    "widthMm": 1900,
+    "powerSplit": "~50/50 combustion / electric",
+    "fuel": "100% advanced sustainable",
+    "estimates": {
+      "powerHp": 1000
+    },
+    "notes": "First year of the 2026 regulations. Minimum weight down 32 kg from 800 kg. MGU-H removed and MGU-K raised from 120 kW to 350 kW. DRS is gone, replaced by active aero (Straight and Corner modes) plus Overtake Mode."
+  },
+  "cars": {
+    "MCL": {
+      "chassis": "MCL40",
+      "powerUnit": "Mercedes-AMG",
+      "powerUnitSupplier": "Mercedes"
+    },
+    "MER": {
+      "chassis": "W17",
+      "powerUnit": "Mercedes-AMG",
+      "powerUnitSupplier": "Mercedes"
+    },
+    "RBR": {
+      "chassis": "RB22",
+      "powerUnit": "Red Bull Powertrains-Ford",
+      "powerUnitSupplier": "Red Bull Ford"
+    },
+    "FER": {
+      "chassis": "SF-26",
+      "powerUnit": "Ferrari",
+      "powerUnitSupplier": "Ferrari",
+      "notes": "Project 678. Ferrari's 72nd F1 car."
+    },
+    "WIL": {
+      "chassis": "FW48",
+      "powerUnit": "Mercedes-AMG",
+      "powerUnitSupplier": "Mercedes",
+      "weightKg": 772.4
+    },
+    "RB": {
+      "chassis": "VCARB 03",
+      "powerUnit": "Red Bull Powertrains-Ford",
+      "powerUnitSupplier": "Red Bull Ford"
+    },
+    "AMR": {
+      "chassis": "AMR26",
+      "powerUnit": "Honda RA626H",
+      "powerUnitSupplier": "Honda",
+      "notes": "First Aston Martin designed under Adrian Newey, and Honda's return as a works partner."
+    },
+    "HAAS": {
+      "chassis": "VF-26",
+      "powerUnit": "Ferrari",
+      "powerUnitSupplier": "Ferrari"
+    },
+    "SAU": {
+      "chassis": "R26",
+      "powerUnit": "Audi",
+      "powerUnitSupplier": "Audi",
+      "notes": "Audi's first works entry, racing as Audi Revolut F1 Team. Chassis built in Hinwil, power unit in Neuburg an der Donau. Still keyed as SAU because the app's team id and asset folder are Sauber."
+    },
+    "ALP": {
+      "chassis": "A526",
+      "powerUnit": "Mercedes-AMG",
+      "powerUnitSupplier": "Mercedes"
+    },
+    "CAD": {
+      "chassis": "MAC-26",
+      "powerUnit": "Ferrari",
+      "powerUnitSupplier": "Ferrari",
+      "notes": "'Mario Andretti Cadillac'. Cadillac's first F1 car. This entry will not resolve until a CAD team id and assets exist in driver_and_team_data.json."
+    }
+  }
+}
