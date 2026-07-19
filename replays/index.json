@@ -3,11 +3,20 @@
  "replays": [
   {
    "year": 2026,
+   "round": 10,
+   "raceName": "Belgian Grand Prix",
+   "circuit": "Spa-Francorchamps",
+   "file": "2026/2026_10_R.json.gz",
+   "sizeKb": 918,
+   "posSource": "live"
+  },
+  {
+   "year": 2026,
    "round": 9,
    "raceName": "British Grand Prix",
    "circuit": "Silverstone",
    "file": "2026/2026_09_R.json.gz",
-   "sizeKb": 723,
+   "sizeKb": 1000,
    "posSource": "live"
   },
   {
@@ -16,7 +25,7 @@
    "raceName": "Austrian Grand Prix",
    "circuit": "Spielberg",
    "file": "2026/2026_08_R.json.gz",
-   "sizeKb": 640,
+   "sizeKb": 883,
    "posSource": "live"
   },
   {
@@ -25,7 +34,7 @@
    "raceName": "Barcelona Grand Prix",
    "circuit": "Barcelona",
    "file": "2026/2026_07_R.json.gz",
-   "sizeKb": 664,
+   "sizeKb": 939,
    "posSource": "live"
   },
   {
@@ -34,7 +43,7 @@
    "raceName": "Canadian Grand Prix",
    "circuit": "Montr\u00e9al",
    "file": "2026/2026_05_R.json.gz",
-   "sizeKb": 598,
+   "sizeKb": 832,
    "posSource": "live"
   },
   {
@@ -43,7 +52,7 @@
    "raceName": "Miami Grand Prix",
    "circuit": "Miami Gardens",
    "file": "2026/2026_04_R.json.gz",
-   "sizeKb": 654,
+   "sizeKb": 907,
    "posSource": "live"
   },
   {
@@ -52,7 +61,7 @@
    "raceName": "Japanese Grand Prix",
    "circuit": "Suzuka",
    "file": "2026/2026_03_R.json.gz",
-   "sizeKb": 733,
+   "sizeKb": 1017,
    "posSource": "live"
   },
   {
@@ -61,7 +70,7 @@
    "raceName": "Chinese Grand Prix",
    "circuit": "Shanghai",
    "file": "2026/2026_02_R.json.gz",
-   "sizeKb": 585,
+   "sizeKb": 815,
    "posSource": "live"
   },
   {
@@ -70,7 +79,7 @@
    "raceName": "Australian Grand Prix",
    "circuit": "Melbourne",
    "file": "2026/2026_01_R.json.gz",
-   "sizeKb": 580,
+   "sizeKb": 808,
    "posSource": "live"
   },
   {
